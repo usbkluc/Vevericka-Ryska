@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Inter:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fredoka", sans-serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#FFF9F0] text-[#4A3728] font-sans antialiased;
+  }
+}
+
+.kid-card {
+  @apply bg-white border-4 border-[#FFD93D] rounded-[40px] shadow-[0_12px_0_0_#FFD93D] p-8 md:p-12;
+}
+
+.btn-truth {
+  @apply bg-[#6BCB77] text-white font-display font-bold text-3xl px-12 py-6 rounded-full border-b-8 border-[#4DAF58] transition-all hover:translate-y-1 hover:border-b-4 active:translate-y-2 active:border-b-0 shadow-lg;
+}
+
+.btn-lie {
+  @apply bg-[#FF6B6B] text-white font-display font-bold text-3xl px-12 py-6 rounded-full border-b-8 border-[#D65555] transition-all hover:translate-y-1 hover:border-b-4 active:translate-y-2 active:border-b-0 shadow-lg;
+}
+
+.btn-next {
+  @apply bg-[#4D96FF] text-white font-display font-bold text-2xl px-10 py-5 rounded-full border-b-8 border-[#3B7DDB] transition-all hover:translate-y-1 hover:border-b-4 active:translate-y-2 active:border-b-0 shadow-lg;
+}
+
+.progress-bar {
+  @apply h-6 bg-[#E8E1D9] rounded-full overflow-hidden border-4 border-white shadow-inner;
+}
+
+.progress-fill {
+  @apply h-full bg-[#FFD93D] rounded-full transition-all duration-500;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+.animate-wiggle {
+  animation: wiggle 2s ease-in-out infinite;
+}
+
+.bubble-bg {
+  background-image: radial-gradient(circle at 20% 20%, rgba(255, 217, 61, 0.1) 0%, transparent 20%),
+                    radial-gradient(circle at 80% 80%, rgba(107, 203, 119, 0.1) 0%, transparent 20%);
+}
